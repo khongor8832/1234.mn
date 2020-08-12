@@ -1,7 +1,7 @@
 // learn 16.Обьект гэж юу вэ, түүний өгөгдөлд хандах тухай
 
-// 1. Primitive 
-//      Дотороо ганц утга агуулдаг. 
+// 1. Primitive
+//      Дотороо ганц утга агуулдаг.
 /* 2. Обьект 
      {key : value}төрлийн өгөгдлүүд хадгална. 
               Нэр : Амарбат 
@@ -18,63 +18,97 @@ var h1 = {
 }
 console.log(colsole гэдэг бол обьект юм. log гэдэг бол функц юм. )*/
 
-// Object жн: 
+// Object жн:
 var h1 = {
-    name: 'Ц.Амарбат',
-    job: 'Программист',
-    hobbi: 'ном унших',
-    address: {
-        location: 'Монгол',
-        city: 'Улаанбаатар',
-        street: '3-р хороон',
-    }
-}
-console.log(h1.job + ' мэргэжилтэн ' + h1.name + ' -ийн  хобби нь ' + h1.hobbi + ' юм. ' + h1.name + ' нь ' + h1.address.location + ' ' + h1.address.city + ' ' + h1.address.street + ' д амьдардаг.');
+  name: "Ц.Амарбат",
+  job: "Программист",
+  hobbi: "ном унших",
+  address: {
+    location: "Монгол",
+    city: "Улаанбаатар",
+    street: "3-р хороон",
+  },
+};
+console.log(
+  h1.job +
+    " мэргэжилтэн " +
+    h1.name +
+    " -ийн  хобби нь " +
+    h1.hobbi +
+    " юм. " +
+    h1.name +
+    " нь " +
+    h1.address.location +
+    " " +
+    h1.address.city +
+    " " +
+    h1.address.street +
+    " д амьдардаг."
+);
 
 var h1 = {
-    name: 'Ц.Амарбат',
-    job: 'Программист',
-    hobbi: 'ном унших',
-    location: 'Монгол'
-}
+  name: "Ц.Амарбат",
+  job: "Программист",
+  hobbi: "ном унших",
+  location: "Монгол",
+};
 var h2 = {
-    name: 'Ганзориг',
-    job: 'дизайнер',
-    hobbi: 'спорт',
-    address: {
-        location: 'Алтай хотхон 32-115 тоот',
-        city: 'Улаабаатар',
-        country: 'Монгол'
-    }
-}
-console.log(h1.job + ' мэргэжилтэй ' + h1.name + '-ийн хобби нь'
-    + h1.hobbi + ' юм. ' + h1.name + ' нь ' + h1.location
-    + ' д амьдардаг.');
+  name: "Ганзориг",
+  job: "дизайнер",
+  hobbi: "спорт",
+  address: {
+    location: "Алтай хотхон 32-115 тоот",
+    city: "Улаабаатар",
+    country: "Монгол",
+  },
+};
+console.log(
+  h1.job +
+    " мэргэжилтэй " +
+    h1.name +
+    "-ийн хобби нь" +
+    h1.hobbi +
+    " юм. " +
+    h1.name +
+    " нь " +
+    h1.location +
+    " д амьдардаг."
+);
 
-console.log(h2.job + ' мэргэжилтэй ' + h2.name + '-ийн хобби нь'
-    + h2.hobbi + 'юм. ');
+console.log(
+  h2.job + " мэргэжилтэй " + h2.name + "-ийн хобби нь" + h2.hobbi + "юм. "
+);
 
 var c1 = {
-    name: "Javascript хэлийг эхнээс нь дуустал!",
-    lessonCount: 116,
-    totalMin: 904,
-    author: h1,
-    price: 199000,
-    discount: 26900
-}
+  name: "Javascript хэлийг эхнээс нь дуустал!",
+  lessonCount: 116,
+  totalMin: 904,
+  author: h1,
+  price: 199000,
+  discount: 26900,
+};
 
 var c2 = {
-    name: "HTML, CSS хэлийг эхнээс нь дуустал!",
-    lessonCount: 128,
-    totalMin: 1217,
-    author: h2,
-    price: 146000,
-    discount: 26900
-}
+  name: "HTML, CSS хэлийг эхнээс нь дуустал!",
+  lessonCount: 128,
+  totalMin: 1217,
+  author: h2,
+  price: 146000,
+  discount: 26900,
+};
 
-console.log('обьетийн функц юм.');
+console.log("обьетийн функц юм.");
 console.log();
 
-console.log(c2.author.address.location + '-д амьдардаг ' + c2.author.name
-    + '-ийн 2019 онд гаргасан "' + c2.name + '"сургалт нь ' + c2.price
-    + ' үнэтэй боловч яг одоогоор ' + c2.discount + ' болж хямдарсан байна.');
+console.log(
+  c2.author.address.location +
+    "-д амьдардаг " +
+    c2.author.name +
+    '-ийн 2019 онд гаргасан "' +
+    c2.name +
+    '"сургалт нь ' +
+    c2.price +
+    " үнэтэй боловч яг одоогоор " +
+    c2.discount +
+    " болж хямдарсан байна."
+);
