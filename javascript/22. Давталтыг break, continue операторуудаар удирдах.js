@@ -6,7 +6,14 @@
 
 // watch-> харах = Цонхны тухай too[i] сонгож байгаад mouseны баруун товчлуурыг дараад  add to watch гэсэн командыг сонго
 var too = [12, 13, 17, 90, 21, 65, 32];
+
 for (var i = 0; i < too.length; i++) {
   if (too[i] % 7 !== 0) continue;
-  console.log(too[i]);
+
+  console.log(too[i] + " энэ тоо 7-д хуваагдана. ");
+  var huvaasanToo = too[i] / 7;
+  console.log(too[i] + " тоог 7-д хуваахад " + huvaasanToo + " гарна.");
+  console.log("Квадрат нь : " + huvaasanToo ** 2);
+  break;
 }
+console.log("Програм дууслаа.");
