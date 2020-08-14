@@ -29,7 +29,26 @@ for (var i = 100; i <= 10; i = i + 2) {
 for (var i = 100; i > 0; i--) {
   if (i % 7 === 0) console.log(i + " = 7 хувааддаг тоо.");
 }
-for (var i = 10; i > 0; i--) {
-    console.log(i)
-    for(var j = 1; j < 10; j++)
+
+// Давхар давталт 
+for (var i = 5; i > 0; i--) {
+  // console.log(i)
+  var s = "";
+  for (var j = 1; j < i; j++)
+    s = s + j + " ";
+  {
+    console.log(s);
   }
+}
+
+// Давхар давталт 
+for (var i = 5; i > 0; i--) {
+  // console.log(i)
+  var s = 0;
+  for (var j = 1; j < i; j++)
+    s = s + j + " ";
+  {
+    console.log("1 ээс " + i + "хүртлэх тооны нийлбэр : " + s);
+  }
+
+}
