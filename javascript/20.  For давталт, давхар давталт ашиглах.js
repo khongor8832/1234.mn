@@ -46,7 +46,7 @@ for (var i = 5; i > 0; i--) {
   // console.log(i)
   var s = 0;
   for (var j = 1; j < i; j++)
-    s = s + j + " ";
+    s = s + j
   {
     console.log("1 ээс " + i + "хүртлэх тооны нийлбэр : " + s);
   }
