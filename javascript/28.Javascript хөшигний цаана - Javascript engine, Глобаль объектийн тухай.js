@@ -36,11 +36,27 @@ Javascript engine --> Javascript кодыг ажиллуулж үр дүнгий
 4. var lastname = 'Jhon'
     -console,log(window.lastname)           //jhon
     -console,log(globalThis.lastname)       //jhon*/
-var lastname = "boldoo";
+var lastname = "Сүхбаатар";
 console.log(lastname);
 console.log(window.lastname);
 console.log(globalThis.lastname);
+window.alert('window : энэ бол глобал хэсгээс дуудаж байна.')//javascript-ынх биш глобал хувьсагч байна.
 
-function huniiMedeelel() {
-  console.log("Энэ хүний овог: " + lastname);
+
+
+// console.log(firstname); //  функцын дотороос lastname дуудаж ажилуухад ажилахгүй байна. 
+
+huniiMedeelel(); // энэ жинхэнэ функцыг дуудаж ажилуулж байгаа юм. 
+function huniiMedeelel() { // энэ бол функцын код юм. 
+    var firstname = 'Наранбат'
+    console.log(firstname);
+    console.log("Энэ хүний овог нэр: " + lastname + ' ' + firstname);
+    //   функцын гаднаас lastname дуудаж ажиллуулж байна.
+    globalThis.alert('globalThis : энэ бол функц дотроос дуудаж байна.')
+    //javascript-ынх биш глобал хувьсагч байна.
 }
+
+// Энэ талаар excution context, excution stack, scoop chain гээд дараа дараагийн хичээлээр бүр тодорхой үзнэ.
+// Глобал объект хаа сайгүй хандагдаг байх нь  (window, globalThis ) - 2 объект яг ижилхэн 
+// глобал объектын өгөгдлийг ашиглаж байхад заавал урд талын объектын нэрийг бичихгүй байж болно.  
+// Broser дотор глобал объек маан асар их зүйлээр биднийг хангадаг байхнээ нэг нь гэхэд alert 
