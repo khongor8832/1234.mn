@@ -1,22 +1,5 @@
-// learn 44. Оноог цуглуулах, DRY зарчим буюу нэг кодоо дахин дахин бичихээс зайлсхийх нь
-
-// тоглогчын ээлжийг хадгалах хувьсагч, нэгдүгээр тоглогчийг 0, хоёрдугаар тоглогчийг 1 гэж тэмдэглэе.
-var activePlayer = 0;
-
-// Тоглогчдын цуглуулсан оноог хадгалах хувьсагч
-var scores = [0, 0];
-
-// Тоглогчын ээлжиндээ цуглуулж байгаа оноог хадгалах хувьсагч
-var roundScore = 0;
-
-// Тоглоомыг эхлүүлнэ.
-document.getElementById("score-0").textContent = "0";
-document.getElementById("score-1").textContent = "0";
-document.getElementById("current-0").textContent = "0";
-document.getElementById("current-1").textContent = "0";
-
+// learn 45. Тоглоомыг шинээр эхлүүлэх функцийг бичих
 var diceDom = document.querySelector(".dice");
-diceDom.style.display = "none";
 
 //// Шоог шидэх эвэнт листенер
 document.querySelector(".btn-roll").addEventListener("click", function () {
@@ -84,5 +67,28 @@ function switchToNextPlayer() {
   document.querySelector(".player-1-panel").classList.toggle("active");
 
   //  Шоог харагдахгүй болгон.
+  diceDom.style.display = "none";
+}
+// Шинэ тоглоом эхлүүлэх товчний эвент листенер
+document.querySelector(".btn-new").addEventListener("click", function () {
+  alert("963");
+});
+
+function initGame() {
+  // тоглогчын ээлжийг хадгалах хувьсагч, нэгдүгээр тоглогчийг 0, хоёрдугаар тоглогчийг 1 гэж тэмдэглэе.
+  var activePlayer = 0;
+
+  // Тоглогчдын цуглуулсан оноог хадгалах хувьсагч
+  var scores = [0, 0];
+
+  // Тоглогчын ээлжиндээ цуглуулж байгаа оноог хадгалах хувьсагч
+  var roundScore = 0;
+
+  // Тоглоомыг эхлүүлнэ.
+  document.getElementById("score-0").textContent = "0";
+  document.getElementById("score-1").textContent = "0";
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
+
   diceDom.style.display = "none";
 }
