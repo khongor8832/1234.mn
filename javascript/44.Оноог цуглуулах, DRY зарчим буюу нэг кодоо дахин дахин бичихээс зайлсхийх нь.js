@@ -1,9 +1,4 @@
-// learn 43. Оноог өөрчилж, тоглогчийн ээлжийг солих
-// class-ын жагсаалтыг document дотор classList гэж байдаг.  Хэдэг class хийж өгч болдог 1234 гэх мэт
-// Жишээ нь document.querySelector(".player-0-panel").classList.remove("active");
-/* classList.add класс нэмнэ.  */
-/* classList.romove класс хасна.  */
-/* classList.toggle  класс дотор байж байх юм бол устгана, байхгүй байвал нэмдэг */
+// learn 44. Оноог цуглуулах, DRY зарчим буюу нэг кодоо дахин дахин бичихээс зайлсхийх нь
 
 // тоглогчын ээлжийг хадгалах хувьсагч, нэгдүгээр тоглогчийг 0, хоёрдугаар тоглогчийг 1 гэж тэмдэглэе.
 var activePlayer = 0;
@@ -49,12 +44,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     // Тоглогчийн ээлжийг нөгөө тоглогчруу шилжүүлнэ.
     // Хэрвээ идэвхтэй тоглогч нь 0 байвал идэвхтэй тоглогчийг 1 болго.
     // Үгүй бол идэвхтэй тоглогчийг 0 болго.
-    /*if (activePlayer === 0) {
-        activePlayer = 1;
-      } else {
-        activePlayer = 0;
-            }
-       Гурвалсан оператор ашиглаж энийг товчоор ашиглаж болно. */
+
     activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
 
     // улаан цэгийг
