@@ -2,16 +2,19 @@ var uiController = (function () {
   var x = 100;
 
   function add(y) {
-    re;
+    return x + y;
   }
-  console.log("hello ");
+
+  return {
+    publicAdd: function (a) {
+      a = add(a);
+      console.log("Боловсруулсан утга : " + a);
+    },
+  };
 })();
 
-var financeController = (function () {
-  var y = 21;
-  console.log("finance " + y);
-})();
+var financeController = (function () {})();
 
-var appContoller = (function (uiController, financeController) {
-  uiController.add(50);
+var appController = (function (uiController, fnController) {
+  uiController.publicAdd(50);
 })(uiController, financeController);
