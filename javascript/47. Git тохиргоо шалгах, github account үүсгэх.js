@@ -9,7 +9,7 @@ git checkout
 
 Github repository: 
 git remote add origin "git repo url"
-git remote -v 
+git remote -v   // git ямар remote сэрвэртэй холбоотой байгааг харуулдаг. 
 git push 
 git pull 
  
