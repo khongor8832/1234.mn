@@ -1,3 +1,4 @@
+// 66. Орлого, зарлагыг хадгалах объектийг үүсгэх
 // Дэлгэцтэй ажиллах контроллер
 var uiController = (function () {
   var DOMstring = {
@@ -22,31 +23,28 @@ var uiController = (function () {
 
 // Санхүүтэй ажиллах контроллер
 var financeController = (function () {
-  var Income = function(id, description, value) {
+  var Income = function (id, description, value) {
     this.id = id;
     this.description = description;
     this.value = value;
-  }
-  
-  var Expense = function(id, description, value) {
-    this.id = id;
-    this.description = description;
-    this.value = value;
-  }
+  };
 
-  var data = {      
+  var Expense = function (id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;
+  };
+
+  var data = {
     allItems: {
       inc: [],
-      exp: []
+      exp: [],
     },
     totals: {
-      inc: 1000,
-      exp: 500
-    }
-  }
-
-  
-  
+      inc: 0,
+      exp: 0,
+    },
+  };
 })();
 
 // Програмын холбогч контроллер

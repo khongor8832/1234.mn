@@ -1,3 +1,5 @@
+// learn 65.Бүх үйл ажиллагааг шинээр эхлүүлэх функцийг бэлтгэх.
+
 // Дэлгэцтэй ажиллах контроллер
 var uiController = (function () {
   var DOMstring = {
@@ -19,36 +21,8 @@ var uiController = (function () {
     },
   };
 })();
-
 // Санхүүтэй ажиллах контроллер
-var financeController = (function () {
-  var Income = function(id, description, value) {
-    this.id = id;
-    this.description = description;
-    this.value = value;
-  }
-  
-  var Expense = function(id, description, value) {
-    this.id = id;
-    this.description = description;
-    this.value = value;
-  }
-
-  var data = {      
-    allItems: {
-      inc: [],
-      exp: []
-    },
-    totals: {
-      inc: 1000,
-      exp: 500
-    }
-  }
-
-  
-  
-})();
-
+var financeController = (function () {})();
 // Програмын холбогч контроллер
 var appController = (function (uiController, fnController) {
   var ctrlAddItem = function () {
@@ -74,9 +48,11 @@ var appController = (function (uiController, fnController) {
   };
   return {
     init: function () {
+      //Програмыг эхлүүлэх функц
       console.log("Application started ...");
       setupEventListener();
     },
   };
 })(uiController, financeController);
-appController.init();
+
+appController.init(); //Програмыг эхлүүлэх

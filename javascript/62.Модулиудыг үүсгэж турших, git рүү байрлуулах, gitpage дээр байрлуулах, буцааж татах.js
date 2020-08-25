@@ -31,3 +31,19 @@ var appController = (function (uiController, fnController) {
 
 //HTML дээр value гэдэг жинхэнэ утга байдаг харин placeholder нь түр зуурынх байдаг. Дээр нь юм бичиж болдог.
 // Жишээ нь <input value="682565" type="text" class="add__description" placeholder="Add description">
+
+var hunController = (function () {
+  var bodol = "JAvascript толгой эргүүлмээр юм. ";
+  function tusGuih() {}
+  function huchilTurugchAgaaraasSorjTsusruuOruulah() {}
+  return {
+    yrih: function () {
+      bodol = "JAvascript лаг ";
+      huchilTurugchAgaaraasSorjTsusruuOruulah();
+      tusGuih();
+      console.log("hi");
+    },
+  };
+})();
+
+hunController.yrih();
