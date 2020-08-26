@@ -1,3 +1,4 @@
+// learn 71 Өрхийн төсвийг орлого зарлагын дагуу өөрчлөх
 // Дэлгэцтэй ажиллах контроллер
 var uiController = (function () {
   //pravite объект
@@ -8,13 +9,6 @@ var uiController = (function () {
     addBtn: ".add__btn",
     incomeList: ".income__list",
     expenseList: ".expenses__list",
-    /********************************* */
-    tusuvLabel: ".budget__value",
-    incomeLabel: ".budget__income--value",
-    expenseLabel: ".budget__expenses--value",
-    percentageLabel: ".budget__expenses--percentage",
-
-    /**************************** */
   };
   return {
     //public функц
@@ -41,23 +35,7 @@ var uiController = (function () {
       });
       fieldsArr[0].focus();
     },
-    /********************************** */
 
-    tusviigUzuuleh: function (tusuv) {
-      document.querySelector(DOMstring.tusuvLabel).textContent = tusuv.tusuv;
-      document.querySelector(DOMstring.incomeLabel).textContent =
-        tusuv.totalInc;
-      document.querySelector(DOMstring.expenseLabel).textContent =
-        tusuv.totalExp;
-      if (tusuv.huvi !== 0) {
-        document.querySelector(DOMstring.percentageLabel).textContent =
-          tusuv.huvi + "%";
-      } else {
-        document.querySelector(DOMstring.percentageLabel).textContent =
-          tusuv.huvi;
-      }
-    },
-    /***************************************** */
     addListItem: function (item, type) {
       // 1.Орлого зарлагын элементийг агуулсан html-ийг бэлтгэнэ.
       var html, list;
@@ -94,7 +72,7 @@ var financeController = (function () {
     this.description = description;
     this.value = value;
   };
-
+  /********************************************** */
   var calculateTotal = function (type) {
     var sum = 0;
 
@@ -103,7 +81,7 @@ var financeController = (function () {
     });
     data.totals[type] = sum;
   };
-
+  /************************************************* */
   //pravite объект
   var data = {
     items: {
@@ -114,11 +92,12 @@ var financeController = (function () {
       inc: 0,
       exp: 0,
     },
-    tusuv: 0,
-    huvi: 0,
+    /***/ tusuv: 0 /***/,
+    /***/ huvi: 0 /***/,
   };
 
   return {
+    /***************************************************** */
     tusuvTootsooloh: function () {
       // Нийт орлогын нийлбэрийг тооцоолно.
       calculateTotal("inc");
@@ -130,7 +109,7 @@ var financeController = (function () {
       data.huvi = Math.round((data.totals.exp / data.totals.inc) * 100);
     },
 
-    tusviigAvah: function () {
+    tusuvAvah: function () {
       return {
         tusuv: data.tusuv,
         huvi: data.huvi,
@@ -138,7 +117,7 @@ var financeController = (function () {
         totalExp: data.totals.exp,
       };
     },
-
+    /*********************************************************** */
     addItem: function (type, desc, val) {
       var item, id;
       if (data.items[type].length === 0) id = 1;
@@ -157,9 +136,9 @@ var financeController = (function () {
       return item;
     },
 
-    // seeData: function () {
-    //   return data;
-    // },
+    seeData: function () {
+      return data;
+    },
   };
 })();
 
@@ -181,20 +160,19 @@ var appController = (function (uiController, fnController) {
       // 3. Олж авсан өгөгдлүүдээ вэб дээрээ тохирох хэсэгт гаргана.
       uiController.addListItem(item, input.type);
       uiController.clearFields();
-
+      /********************************************************* */
       // 4. Төсөвийг тооцоолно.
       financeController.tusuvTootsooloh();
       // 5. Эцсийн үлдэгдэл, тооцоог дэлгэцэнд гаргана.
-      var tusuv = financeController.tusviigAvah();
+      var tusuv = financeController.tusuvTootsooloh();
 
       // 6.  Төсөвийг тооцоог дэлгэцэнд гаргана.
-      uiController.tusviigUzuuleh(tusuv);
     }
+    /*************************************** */
   };
 
   var setupEventListener = function () {
     var DOM = uiController.getDOMsrting();
-
     document.querySelector(DOM.addBtn).addEventListener("click", function () {
       ctrlAddItem();
     });
